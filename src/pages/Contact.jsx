@@ -3,7 +3,7 @@ import { business } from '../data/business'
 
 function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState('idle')
 
   useEffect(() => {
     document.title = 'Contact Us | Australia Business Guide'
@@ -13,9 +13,28 @@ function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    setSubmitted(true)
+    setStatus('sending')
+
+    try {
+      const formData = new FormData()
+      formData.append('access_key', business.web3FormsAccessKey)
+      formData.append('subject', `New enquiry from ${form.name} via Australia Business Guide website`)
+      formData.append('name', form.name)
+      formData.append('email', form.email)
+      formData.append('message', form.message)
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: formData,
+      })
+      const result = await response.json()
+      setStatus(result.success ? 'success' : 'error')
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -46,7 +65,7 @@ function Contact() {
 
           <form className="contact-form" onSubmit={handleSubmit}>
             <h2>Send A Quick Enquiry</h2>
-            {submitted ? (
+            {status === 'success' ? (
               <p className="form-success">
                 Thanks for reaching out! We'll be in touch shortly — or call us now for an
                 immediate response.
@@ -83,8 +102,14 @@ function Contact() {
                   onChange={handleChange}
                 />
 
-                <button type="submit" className="btn btn-cta btn-lg">
-                  Send Enquiry
+                {status === 'error' && (
+                  <p className="form-error">
+                    Something went wrong sending your enquiry. Please call us now or try again.
+                  </p>
+                )}
+
+                <button type="submit" className="btn btn-cta btn-lg" disabled={status === 'sending'}>
+                  {status === 'sending' ? 'Sending…' : 'Send Enquiry'}
                 </button>
               </>
             )}
