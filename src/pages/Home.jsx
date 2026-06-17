@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { business } from '../data/business'
 import { services } from '../data/services'
 import { faqs } from '../data/faq'
@@ -8,7 +7,7 @@ function Home() {
   const [openFaq, setOpenFaq] = useState(null)
 
   useEffect(() => {
-    document.title = 'Australian Business Guide | Marketing Services Australia'
+    document.title = 'Australia Business Guide | Marketing Services Australia'
   }, [])
 
   return (
@@ -17,7 +16,7 @@ function Home() {
         <div className="container hero-inner">
           <h1>{business.tagline}</h1>
           <p className="hero-sub">
-            Australian Business Guide helps small to large businesses across Australia get seen,
+            Australia Business Guide helps small to large businesses across Australia get seen,
             get found, and get more enquiries — through bold, multi-channel marketing across bus,
             cinema, billboard, social, search, and podcast advertising.
           </p>
@@ -58,7 +57,7 @@ function Home() {
 
       <section className="section why-section">
         <div className="container">
-          <h2>Why Businesses Choose Australian Business Guide</h2>
+          <h2>Why Businesses Choose Australia Business Guide</h2>
           <div className="why-grid">
             <div className="why-card">
               <h3>Multi-Channel Reach</h3>
@@ -97,7 +96,7 @@ function Home() {
       <section className="section cta-banner">
         <div className="container cta-banner-inner">
           <h2>Ready To Get More Customers?</h2>
-          <p>Talk to Australian Business Guide today and start getting noticed.</p>
+          <p>Talk to Australia Business Guide today and start getting noticed.</p>
           <a href={business.phoneHref} className="btn btn-cta btn-lg">
             Call Us Now
           </a>
@@ -139,15 +138,6 @@ function Home() {
         </div>
       </section>
 
-      <section className="section final-cta">
-        <div className="container cta-banner-inner">
-          <h2>See Our Work</h2>
-          <p>Check out the marketing channels we work across on our Portfolio page.</p>
-          <Link to="/portfolio" className="btn btn-outline btn-lg">
-            View Portfolio
-          </Link>
-        </div>
-      </section>
     </>
   )
 }

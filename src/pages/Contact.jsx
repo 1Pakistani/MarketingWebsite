@@ -6,7 +6,7 @@ function Contact() {
   const [submitted, setSubmitted] = useState(false)
 
   useEffect(() => {
-    document.title = 'Contact Us | Australian Business Guide'
+    document.title = 'Contact Us | Australia Business Guide'
   }, [])
 
   function handleChange(e) {
@@ -21,7 +21,7 @@ function Contact() {
   return (
     <section className="section contact-page">
       <div className="container">
-        <h1>Contact Australian Business Guide</h1>
+        <h1>Contact Australia Business Guide</h1>
         <p className="section-intro">
           Ready to grow your business? Call us now, message us on WhatsApp, or send a quick
           enquiry below.

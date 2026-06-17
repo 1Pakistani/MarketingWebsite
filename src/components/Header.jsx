@@ -12,7 +12,7 @@ function Header() {
           <NavLink to="/" end>
             Home
           </NavLink>
-          <NavLink to="/portfolio">Portfolio</NavLink>
+          <NavLink to="/about">About Us</NavLink>
           <NavLink to="/contact">Contact Us</NavLink>
         </nav>
         <a href={business.phoneHref} className="btn btn-cta header-cta">

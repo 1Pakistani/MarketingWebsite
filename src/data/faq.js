@@ -1,6 +1,6 @@
 export const faqs = [
   {
-    q: 'What marketing services does Australian Business Guide offer?',
+    q: 'What marketing services does Australia Business Guide offer?',
     a: 'We offer bus marketing, cinema marketing, Reddit marketing, billboard marketing, Meta marketing, YouTube / Google marketing, Facebook marketing, TikTok marketing, and podcast marketing — covering both traditional and digital channels across Australia.',
   },
   {

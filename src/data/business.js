@@ -1,5 +1,5 @@
 export const business = {
-  name: 'Australian Business Guide',
+  name: 'Australia Business Guide',
   tagline: 'Bold Marketing That Gets Australian Businesses Seen',
   phoneDisplay: '0426 618 692',
   phoneHref: 'tel:+61426618692',

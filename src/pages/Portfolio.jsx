@@ -4,7 +4,7 @@ import { services } from '../data/services'
 
 function Portfolio() {
   useEffect(() => {
-    document.title = 'Portfolio | Australian Business Guide'
+    document.title = 'Portfolio | Australia Business Guide'
   }, [])
 
   return (

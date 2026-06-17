@@ -5,6 +5,7 @@ import StickyContact from './components/StickyContact'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import Portfolio from './pages/Portfolio'
+import About from './pages/About'
 import './App.css'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
