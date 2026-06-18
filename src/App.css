@@ -29,11 +29,15 @@
 }
 
 .logo {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--white) !important;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 76px;
+  background: var(--white);
+  border-radius: 8px;
+  padding: 6px 14px;
 }
 
 .main-nav {
@@ -66,8 +70,10 @@
     padding: 14px 20px;
   }
   .logo {
-    font-size: 1.05rem;
     flex: 1 1 auto;
+  }
+  .logo-img {
+    height: 38px;
   }
   .main-nav {
     flex: 1 1 100%;
@@ -337,9 +343,14 @@
   margin-bottom: 16px;
 }
 
-.region-note {
+.address-note {
   color: var(--off-white);
   margin-top: 24px;
+}
+
+.region-note {
+  color: var(--off-white);
+  margin-top: 8px;
 }
 
 .contact-form {

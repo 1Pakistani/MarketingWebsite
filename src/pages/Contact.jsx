@@ -60,6 +60,7 @@ function Contact() {
             >
               WhatsApp: {business.whatsappDisplay}
             </a>
+            <p className="address-note">{business.address}</p>
             <p className="region-note">Serving small to large businesses across {business.region}.</p>
           </div>
 

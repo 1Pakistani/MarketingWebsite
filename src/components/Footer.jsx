@@ -9,6 +9,7 @@ function Footer() {
         <div className="footer-col">
           <h3>{business.name}</h3>
           <p>Bold marketing services for small to large businesses across Australia.</p>
+          <p>{business.address}</p>
           <p>
             <a href={business.phoneHref}>{business.phoneDisplay}</a>
           </p>
